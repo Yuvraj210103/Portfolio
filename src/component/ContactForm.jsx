@@ -2,6 +2,7 @@ import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import resume from './Assets/resume.pdf'
 
 export const ContactForm = () => {
   return (
@@ -51,7 +52,7 @@ export const ContactForm = () => {
         <div className=" mx-2 list-none flex flex-col">
           <a
             className="bg-[#565f69] px-4 py-2 rounded-sm shadow-lg shadow-[#040c16] hover:scale-110 duration-500 "
-            href="/"
+            href={resume} download={resume}
           >
             <BsFillPersonLinesFill size={25} />
           </a>

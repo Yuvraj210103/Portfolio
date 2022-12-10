@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import logo from "./Assets/logo.png";
+import logo from "./Assets/profileImg.jpg";
 import { FaBars, FaTimes,FaGithub,FaLinkedin, } from "react-icons/fa";
 import {HiOutlineMail} from "react-icons/hi"
 import {BsFillPersonLinesFill} from "react-icons/bs"
 import {Link} from 'react-scroll'
+import resume from './Assets/resume.pdf'
 
 
 function NavBar() {
@@ -16,7 +17,7 @@ function NavBar() {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-200 z-20">
       <div>
-        <img src={logo} alt="" srcset="" className="w-[45px] mx-2 opacity-100 rounded-full" />
+        <img src={logo} alt=""  className="w-[45px] mx-2 opacity-100 rounded-full" />
       </div>
 
       <div className="hidden md:flex">
@@ -70,7 +71,7 @@ function NavBar() {
           </a>
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[100px] duration-300 bg-[#565f69]">
-          <a href="/" className="flex justify-between items-center w-full text-gray-300">
+          <a href={resume} download={resume}  className="flex justify-between items-center w-full text-gray-300">
             Resume <BsFillPersonLinesFill size={25}/>
           </a>
         </li>
