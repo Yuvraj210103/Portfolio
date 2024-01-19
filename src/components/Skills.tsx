@@ -3,22 +3,32 @@
 import React from "react";
 
 const skillsArray = [
-  { skillName: "HTML", skillImgSrc: "/assets/html.png" },
-  { skillName: "CSS", skillImgSrc: "/assets/css3.png" },
-  { skillName: "Javascript", skillImgSrc: "/assets/javascript.png" },
-  { skillName: "React-Js", skillImgSrc: "/assets/react.png" },
   {
-    skillName: "Github",
-    skillImgSrc: "/assets/github.png",
+    skillName: "Next-Js",
+    skillImgSrc: "/assets/images/next_js.svg",
     skillImgIsInvert: true,
   },
-  { skillName: "Node-Js", skillImgSrc: "/assets/nodejs.png" },
+  { skillName: "React-Js", skillImgSrc: "/assets/images/react.png" },
   {
     skillName: "Tailwind-Css",
-    skillImgSrc: "/assets/tailwind_css.png",
+    skillImgSrc: "/assets/images/tailwind_css.png",
     skillImgIsInvert: true,
   },
-  { skillName: "Mongo-Db", skillImgSrc: "/assets/mongodb.png" },
+  { skillName: "HTML", skillImgSrc: "/assets/images/html.png" },
+  { skillName: "CSS", skillImgSrc: "/assets/images/css3.png" },
+  { skillName: "Javascript", skillImgSrc: "/assets/images/javascript.png" },
+  { skillName: "Node-Js", skillImgSrc: "/assets/images/nodejs.png" },
+  { skillName: "Mongo-Db", skillImgSrc: "/assets/images/mongodb.png" },
+  {
+    skillName: "Express-Js",
+    skillImgSrc: "/assets/images/express_js.png",
+    skillImgIsInvert: true,
+  },
+  {
+    skillName: "Github",
+    skillImgSrc: "/assets/images/github.png",
+    skillImgIsInvert: true,
+  },
 ];
 
 export const Skills = () => {
@@ -39,16 +49,16 @@ export const Skills = () => {
             return (
               <div
                 key={index}
-                className="shadow-md shadow-[#040c16] hover:scale-[1.01] duration-500 "
+                className="shadow-md shadow-[#040c16] hover:scale-[1.01] duration-500 flex flex-col justify-between gap-4 p-4"
               >
                 <img
-                  className={`w-20 mx-auto ${
+                  className={`w-20 min-h-20 mx-auto ${
                     data.skillImgIsInvert && "invert"
                   }`}
                   src={data.skillImgSrc}
-                  alt=""
+                  alt="skill"
                 />
-                <p className="my-4">{data.skillName}</p>
+                <div className="font-medium">{data.skillName}</div>
               </div>
             );
           })}

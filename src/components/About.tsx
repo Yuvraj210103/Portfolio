@@ -4,8 +4,8 @@ import React from "react";
 export const About = () => {
   return (
     <div
-      id="About"
-      className="bg-[#0a192f] w-full h-screen flex flex-col justify-center text-gray-300"
+      id="about"
+      className="bg-[#0a192f] w-full h-screen flex flex-col items-center justify-center text-gray-300"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
@@ -25,7 +25,7 @@ export const About = () => {
           <div>
             <p>
               I am passionate about building excellent software that improves
-              the lives pf those around me. I specialize in creating software
+              the lives of those around me. I specialize in creating software
               for clients ranging from individuals and small-businesses all the
               way to large enterprise corporations. What would you do if you had
               a software expert available at your fingertips?

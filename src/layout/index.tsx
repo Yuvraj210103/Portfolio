@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className=" flex w-full  flex-col overflow-x-hidden ">
       <NavBar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

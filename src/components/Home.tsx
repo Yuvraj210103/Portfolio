@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 export default function Home() {
   return (
-    <div id="Home" className="bg-[#0a192f] w-full h-screen">
+    <div id="home" className="bg-[#0a192f] w-full h-screen">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col gap-1 justify-center h-full ">
         <p className="text-pink-600">Hi, my name is </p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
@@ -20,16 +20,14 @@ export default function Home() {
           full-stack web application
         </p>
 
-        <div>
+        <Link to="work" smooth={true} duration={500}>
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
-            <Link to="Work" smooth={true} duration={500}>
-              View Work{" "}
-            </Link>
+            View Work{" "}
             <span className="group-hover:rotate-90 duration-100">
               <HiArrowNarrowRight className="ml-3 hover:" />
             </span>{" "}
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );

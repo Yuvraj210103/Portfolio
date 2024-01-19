@@ -17,7 +17,7 @@ function NavBar() {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-200 z-20">
       <div>
         <img
-          src="/assets/logo.png"
+          src="/assets/images/profile_img.jpg"
           alt=""
           className="w-[50px] h-[50px] mx-2 opacity-100 rounded-full"
         />
@@ -26,13 +26,13 @@ function NavBar() {
       <div className="hidden md:flex">
         <ul className="flex">
           <li className="px-4 cursor-pointer">
-            <Link to="Home" smooth={true} duration={500}>
+            <Link to="home" smooth={true} duration={500}>
               Home
             </Link>
           </li>
           <li className="px-4 cursor-pointer">
             {" "}
-            <Link to="About" smooth={true} duration={500}>
+            <Link to="about" smooth={true} duration={500}>
               About{" "}
             </Link>
           </li>
@@ -44,13 +44,13 @@ function NavBar() {
           </li>
           <li className="px-4 cursor-pointer">
             {" "}
-            <Link to="Work" smooth={true} duration={500}>
+            <Link to="work" smooth={true} duration={500}>
               Work
             </Link>
           </li>
           <li className="px-4 cursor-pointer">
             {" "}
-            <Link to="ContactForm" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>
           </li>
@@ -73,12 +73,12 @@ function NavBar() {
         }
       >
         <li className="py-6 text-4xl px-4 cursor-pointer">
-          <Link onClick={handleClick} to="Home" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
         <li className="py-6 text-4xl px-4 cursor-pointer">
-          <Link onClick={handleClick} to="About" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About{" "}
           </Link>
         </li>
@@ -88,59 +88,16 @@ function NavBar() {
           </Link>
         </li>
         <li className="py-6 text-4xl px-4 cursor-pointer">
-          <Link onClick={handleClick} to="Work" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="work" smooth={true} duration={500}>
             Work
           </Link>
         </li>
         <li className="py-6 text-4xl px-4 cursor-pointer">
-          <Link
-            onClick={handleClick}
-            to="ContactForm"
-            smooth={true}
-            duration={500}
-          >
+          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
             Contact
           </Link>
         </li>
       </ul>
-
-      <div className="md:flex flex-row md:fixed md:flex-col md:top-[35%] md:left-0 hidden top-[80%] ">
-        <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[100px] duration-300 px-4 cursor-pointer bg-blue-600">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Linkedin <FaLinkedin size={25} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[100px] duration-300 px-4 cursor-pointer bg-blue-500">
-            <a
-              href="https://github.com/Yuvraj210103"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Github <FaGithub size={25} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[100px] duration-300 px-4 cursor-pointer bg-[#6fc2b0]">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Linkedin <HiOutlineMail size={25} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[100px] duration-300 px-4 cursor-pointer bg-[#565f69]">
-            <a
-              //href={resume}
-              //download={resume}
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Resume <BsFillPersonLinesFill size={25} />
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   );
 }
