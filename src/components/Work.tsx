@@ -1,47 +1,36 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 interface WorkItemProps {
   workName: string;
-  workThumbnailUrl: string;
   workDemoUrl: string;
   workGithubUrl: string;
+  workDescription: string;
 }
 
 const WorkItem = ({
   workDemoUrl,
   workGithubUrl,
   workName,
-  workThumbnailUrl,
+  workDescription,
 }: WorkItemProps) => {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${workThumbnailUrl})`,
-        backgroundSize: "100% 100%",
-        objectFit: "cover",
-        WebkitBackgroundSize: "cover",
-      }}
-      className="flex shadow-lg shadow-[#040c16] group container rounded-md justify-center items-center mx-auto content-div bg-opacity-10 bg-inherit"
-    >
-      {/* Hover effects */}
-
-      <div className="flex flex-col opacity-0 group-hover:opacity-100 justify-center items-center duration-500">
-        <span className="py-2 px-4 rounded text-xl font-bold text-white bg-[#525d8de9] tracking-wider">
-          {workName}
-        </span>
-        <div>
-          <a href={workDemoUrl}>
-            <button className="text-center rounded-lg px-4 py-2 m-2 bg-purple-500 text-gray-200 font-bold text-lg">
-              Demo
-            </button>
-          </a>
-          <a href={workGithubUrl}>
-            <button className="text-center rounded-lg px-4 py-2 m-2 bg-purple-500 text-gray-200 font-bold text-lg">
-              Code
-            </button>
-          </a>
+    <div className="flex flex-col h-full justify-between rounded-md overflow-hidden bg-[#122644]">
+      <div className="flex flex-col gap-4 p-4">
+        <div className="font-bold text-white text-lg">{workName}</div>
+        <div className="text-base font-medium line-clamp-2">
+          {workDescription}
         </div>
+      </div>
+      <div className=" flex items-center gap-4 w-full p-4 shadow-md">
+        <a href={workGithubUrl} target="_blank">
+          <FiGithub className="text-2xl font-semibold" />
+        </a>
+        <a href={workDemoUrl} target="_blank">
+          <FiExternalLink className="text-2xl font-semibold" />
+        </a>
       </div>
     </div>
   );
@@ -58,30 +47,30 @@ const Work = () => {
           <p className="py-6 ">// Check out some of my recent work</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 gap-8">
           <WorkItem
-            workThumbnailUrl="assets/images/thumbnail_inotebook.png"
+            workDescription="Developed a dynamic notebook application using the MERN stack."
             workDemoUrl="https://iinotebook.vercel.app/"
             workGithubUrl="https://github.com/Yuvraj210103"
             workName="iNotebook-cloud"
           />
 
           <WorkItem
-            workThumbnailUrl="/assets/images/thumbnail_ecom.svg"
+            workDescription="Crafted a robust e-commerce platform using React.js, delivering an great online shopping experience."
             workDemoUrl="https://ecommerce-yuvraj.vercel.app/"
             workGithubUrl="https://github.com/Yuvraj210103"
             workName="E-commerce Application"
           />
 
           <WorkItem
-            workThumbnailUrl="assets/images/thumbnail_news_app.jpg"
+            workDescription="News application made with react.js which delivers daily latest news"
             workDemoUrl="https://daily-news-mocha.vercel.app/"
             workGithubUrl="https://github.com/Yuvraj210103"
             workName="News Application"
           />
 
           <WorkItem
-            workThumbnailUrl="assets/images/thumbnail_text_util.jpg"
+            workDescription="Text analyzer made using react.js, analyze you texts seamlessly on your fingertip"
             workDemoUrl="https://yuvraj210103.github.io/Text-Utils/"
             workGithubUrl="https://github.com/Yuvraj210103"
             workName="Text Analyzer"

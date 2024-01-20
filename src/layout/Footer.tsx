@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4">
       <div className="flex items-center justify-center w-full">
-        <div className="flex text-center gap-2 items-center">
+        <div className="flex text-center gap-2 items-center text-sm sm:text-base">
           Made with{" "}
           <span>
             {" "}
