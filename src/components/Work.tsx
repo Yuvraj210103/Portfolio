@@ -25,9 +25,11 @@ const WorkItem = ({
         </div>
       </div>
       <div className=" flex items-center gap-4 w-full p-4 shadow-md">
-        <a href={workGithubUrl} target="_blank">
-          <FiGithub className="text-2xl font-semibold" />
-        </a>
+        {workGithubUrl && (
+          <a href={workGithubUrl} target="_blank">
+            <FiGithub className="text-2xl font-semibold" />
+          </a>
+        )}
         <a href={workDemoUrl} target="_blank">
           <FiExternalLink className="text-2xl font-semibold" />
         </a>
@@ -49,31 +51,30 @@ const Work = () => {
 
         <div className="grid sm:grid-cols-2 gap-8">
           <WorkItem
+            workDescription="Built and maintained a full-stack ERP platform for security agencies to manage guards,shifts, patrols, and operations. Key features include drag-and-drop shift scheduling, patrol creation and tracking, invoicing, paystub generation, and attendance management."
+            workDemoUrl="https://tactiqapp.com/"
+            workGithubUrl=""
+            workName="Tactiq – ERP Tool for Security Agencies"
+          />
+          <WorkItem
+            workDescription="CareerEase is a career preparation platform built with React.js and TypeScript. It helps users set up their profile, generate AI-powered resumes, prepare for interviews, scrape and track jobs, and automate job applications."
+            workDemoUrl="https://careerease.vercel.app/"
+            workGithubUrl="https://github.com/Yuvraj210103/CareerEase"
+            workName="CareerEase"
+          />
+
+          <WorkItem
+            workDescription="Developed a web app for attendance tracking with class, student, and faculty management. Implemented location-verified QR code marking for secure, real-time sessions."
+            workDemoUrl="https://attendlytics.vercel.app"
+            workGithubUrl="https://github.com/Yuvraj210103/attendify"
+            workName="Attendlytics"
+          />
+
+          <WorkItem
             workDescription="Developed a dynamic notebook application using the MERN stack."
             workDemoUrl="https://iinotebook.vercel.app/"
             workGithubUrl="https://github.com/Yuvraj210103"
             workName="iNotebook-cloud"
-          />
-
-          <WorkItem
-            workDescription="Crafted a robust e-commerce platform using React.js, delivering an great online shopping experience."
-            workDemoUrl="https://ecommerce-yuvraj.vercel.app/"
-            workGithubUrl="https://github.com/Yuvraj210103"
-            workName="E-commerce Application"
-          />
-
-          <WorkItem
-            workDescription="News application made with react.js which delivers daily latest news"
-            workDemoUrl="https://daily-news-mocha.vercel.app/"
-            workGithubUrl="https://github.com/Yuvraj210103"
-            workName="News Application"
-          />
-
-          <WorkItem
-            workDescription="Text analyzer made using react.js, analyze you texts seamlessly on your fingertip"
-            workDemoUrl="https://yuvraj210103.github.io/Text-Utils/"
-            workGithubUrl="https://github.com/Yuvraj210103"
-            workName="Text Analyzer"
           />
         </div>
       </div>

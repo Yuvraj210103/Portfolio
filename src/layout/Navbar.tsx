@@ -17,7 +17,7 @@ function NavBar() {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-200 z-20">
       <div>
         <img
-          src="/assets/images/profile_img.jpg"
+          src="/assets/images/profile_img.png"
           alt=""
           className="w-[50px] h-[50px] mx-2 opacity-100 rounded-full"
         />
