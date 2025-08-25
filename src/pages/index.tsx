@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { About } from "@/components/About";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 import Home from "@/components/Home";
 import { Skills } from "@/components/Skills";
 import Work from "@/components/Work";
@@ -15,6 +16,7 @@ export default function Index() {
       <About />
       <Skills />
       <Work />
+      <Experience />
       <Contact />
     </div>
   );
