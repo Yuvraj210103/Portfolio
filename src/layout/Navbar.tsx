@@ -50,6 +50,12 @@ function NavBar() {
           </li>
           <li className="px-4 cursor-pointer">
             {" "}
+            <Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link>
+          </li>
+          <li className="px-4 cursor-pointer">
+            {" "}
             <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>
@@ -90,6 +96,16 @@ function NavBar() {
         <li className="py-6 text-4xl px-4 cursor-pointer">
           <Link onClick={handleClick} to="work" smooth={true} duration={500}>
             Work
+          </Link>
+        </li>
+        <li className="py-6 text-4xl px-4 cursor-pointer">
+          <Link
+            onClick={handleClick}
+            to="experience"
+            smooth={true}
+            duration={500}
+          >
+            Experience
           </Link>
         </li>
         <li className="py-6 text-4xl px-4 cursor-pointer">
